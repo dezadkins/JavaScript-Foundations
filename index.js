@@ -174,7 +174,7 @@ function getName() {
     console.log('Hello ' + userName);
   }
   
-  greet();
+//   greet();
   
 
 /* 🏡  Refactor your `variableInterestRate()` function to accept an array of interest rates (make sure to copy and paste as to not lose your work!) */
