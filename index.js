@@ -9,7 +9,7 @@
 var P = 200000;
 var I = 0.05;
 var N = 30;
-var name = 'Dez';
+var name = 'Dez Adkins';
 
 // 🏡 Task 1.5: Simple Math
 /* To create a monthly mortgage rate calculator, we need to know the number of years in months and the monthly interest rate. 
@@ -142,14 +142,13 @@ For example, variableInterestRate(200000, 0.04, 30) should console.log:
 "{Name}, with an interest rate of 0.06, your monthly rate is $1199"
 */
 
-function variableInterestRate(P, I , N){
-    for (sampleInterestRate = interestRate - 0.02;
-    sampleInterestRate <= interestRate + 0.02;
-    sampleInterestRate += 0.005) {
-        let sampleRate = mortgageCalculator(P, I, N);
-        console.log(`${name} with an interest rate of ${sampleInterestRate.toFixed(3)} your monthly rate is ${sampleInterestRate.toFixed(2)}`)
+function variableInterestRate (P, I , N) {
+    for (let sampleInterestRate = I - 0.02; sampleInterestRate <= I + 0.02; sampleInterestRate += 0.005) {
+        let sampleRate = mortgageCalculator(P, sampleInterestRate, N);
+    console.log(`${name} with an interest rate of ${sampleInterestRate.toFixed(3)}, your monthly rate is ${sampleRate.toFixed(2)}`)
     };
 }
+// variableInterestRate(200000, 0.04, 30)
 
 
 
@@ -166,6 +165,17 @@ function variableInterestRate(P, I , N){
 
 /* 🏡 Explore using `window.prompt()` to allow a user to input parameters in the browser */
 
+function getName() {
+    return prompt('Your name:', '');
+  }
+  
+  function greet() {
+    const userName = getName();
+    console.log('Hello ' + userName);
+  }
+  
+  greet();
+  
 
 /* 🏡  Refactor your `variableInterestRate()` function to accept an array of interest rates (make sure to copy and paste as to not lose your work!) */
 
